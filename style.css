@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #635bff;
+  --primary-dark: #5148e5;
+  --text: #182230;
+  --muted: #667085;
+  --line: #e5e7eb;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(99,91,255,.12), transparent 28%),
+    radial-gradient(circle at 92% 90%, rgba(255,110,80,.10), transparent 25%),
+    #f5f7fb;
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+}
+
+.card {
+  background: rgba(255,255,255,.97);
+  border: 1px solid #edf0f5;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 24px 65px rgba(16,24,40,.12);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 17px;
+  background: #fff0ed;
+  display: grid;
+  place-items: center;
+  font-size: 31px;
+}
+
+h1 {
+  font-size: 26px;
+  letter-spacing: -.6px;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.field {
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.input-wrap {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe3ea;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.input-wrap:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99,91,255,.1);
+}
+
+input, select {
+  width: 100%;
+  height: 53px;
+  border: 1px solid #dfe3ea;
+  border-radius: 12px;
+  outline: none;
+  background: white;
+  padding: 0 13px;
+  font-size: 15px;
+}
+
+.input-wrap input {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+
+.input-wrap span {
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 13px;
+  padding: 0 15px;
+}
+
+.swap-area {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.swap {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border: 1px solid #dddff0;
+  border-radius: 12px;
+  background: #f2f1ff;
+  color: var(--primary);
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.swap:hover {
+  background: #e9e7ff;
+}
+
+.convert,
+.reset {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.convert {
+  margin-top: 19px;
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 8px 20px rgba(99,91,255,.20);
+}
+
+.convert:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.error {
+  min-height: 20px;
+  color: #d92d20;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.result-card {
+  margin-top: 5px;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,#f0efff,#fafaff);
+  border: 1px solid #e4e1ff;
+  text-align: center;
+}
+
+.result-card > span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.result-card strong {
+  color: var(--primary);
+  font-size: 34px;
+}
+
+.result-card small {
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.quick {
+  margin-top: 20px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+}
+
+h2 {
+  font-size: 15px;
+  margin-bottom: 11px;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.quick-grid button {
+  border: 1px solid #e5e7eb;
+  background: #f8f9fc;
+  color: #344054;
+  border-radius: 9px;
+  padding: 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.quick-grid button:hover {
+  border-color: #b8b4ff;
+  background: #f2f1ff;
+}
+
+.reset {
+  margin-top: 13px;
+  background: #eef0f5;
+  color: #344054;
+}
+
+.reset:hover {
+  background: #e2e5eb;
+}
+
+footer {
+  text-align: center;
+  color: #98a2b3;
+  font-size: 10px;
+  margin-top: 19px;
+}
+
+@media (max-width: 540px) {
+  body {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 21px;
+    border-radius: 21px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .swap-area {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .swap {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+  }
+}
